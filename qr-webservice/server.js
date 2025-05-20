@@ -16,7 +16,7 @@ export default function ScannerApp() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [facing, setFacing] = useState<CameraType>("back");
   const [permission, requestPermission] = useCameraPermissions();
-  const [scannedCodes, setScannedCodes] = useState<ScannedCode[]>([]);
+  const [scannedCodes, setScannedCodes] = useState([]);
 
   useEffect(() => {
     async function initialize() {
